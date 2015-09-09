@@ -4,7 +4,7 @@ import groovy.json.JsonBuilder
 
 class JasmineModuleExtension {
     
-    List dependencies = ['karma', 'karma-jasmine@2_0', 'karma-phantomjs-launcher', 'phantomjs']
+    List dependencies = ['karma', 'karma-jasmine@2_0', 'karma-phantomjs-launcher', 'phantomjs', 'karma-junit-reporter']
 
     String basePath = ''
     List frameworks = ['jasmine']
