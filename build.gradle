@@ -1,5 +1,5 @@
 plugins {
-    id 'com.gradle.plugin-publish' version '0.9.1'
+    id 'com.gradle.plugin-publish' version '0.0.1'
     id 'groovy'
     id 'maven-publish'
 }
@@ -12,8 +12,8 @@ repositories {
     mavenCentral()
 }
 
-group = 'com.craigburke.gradle'
-version = '1.2.0'
+group = 'com.alejoHomes.gradle'
+version = '0.0.1'
 
 ext {
     artifactId = 'jasmine'
@@ -36,14 +36,14 @@ publishing {
 }
 
 pluginBundle {
-    website = 'https://github.com/craigburke/jasmine-gradle'
-    vcsUrl = 'https://github.com/craigburke/jasmine-gradle'
+    website = 'https://github.com/alejoHomes/jasmine-gradle'
+    vcsUrl = 'https://github.com/alejoHomes/jasmine-gradle'
     description = 'allows you to run Jasmine tests using Karma'
     tags = ['jasmine', 'karma']
 
     plugins {
         jasmine {
-            id = 'com.craigburke.jasmine'
+            id = 'com.alejoHomes.jasmine'
             displayName = 'Jasmine Test Plugin'
         }
     }
