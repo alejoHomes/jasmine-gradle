@@ -1,15 +1,16 @@
-:version: 1.2.0
+:version: 0.0.2
 
 = Jasmine Gradle Plugin
 
 This Gradle plugin allows you to run Jasmine tests using Karma from your build.
+This is a fork from https://github.com/craigburke/jasmine-gradle[craigburke plugin], added karma-junit-reporter
 
 == Getting Started
 
 [source,gradle,subs='attributes']
 ----
 plugins {
-    id 'com.craigburke.jasmine' version '{version}'
+    id 'com.alejoHomes.jasmine' version '{version}'
 }
 ----
 
@@ -38,7 +39,7 @@ You can use the same properties you'd set in your http://karma-runner.github.io/
 [source,gradle,subs='attributes']
 ----
 plugins {
-    id 'com.craigburke.jasmine' version '{version}'
+    id 'com.alejoHomes.jasmine' version '{version}'
 }
 
 jasmine {
@@ -66,6 +67,10 @@ In addition to the properties listed above, you can also include set other Karma
 jasmine {
     additional = [ // <1>
         colors: true
+        reporters:['progress','junit'],
+        junitReporter: [
+          outputDir: 'test_reports'
+        ]
     ]
 }
 ----

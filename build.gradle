@@ -1,5 +1,5 @@
 plugins {
-    id 'com.gradle.plugin-publish' version '0.0.1'
+    id 'com.gradle.plugin-publish' version '0.9.1'
     id 'groovy'
     id 'maven-publish'
 }
@@ -13,7 +13,7 @@ repositories {
 }
 
 group = 'com.alejoHomes.gradle'
-version = '0.0.1'
+version = '0.0.2'
 
 ext {
     artifactId = 'jasmine'
@@ -38,8 +38,8 @@ publishing {
 pluginBundle {
     website = 'https://github.com/alejoHomes/jasmine-gradle'
     vcsUrl = 'https://github.com/alejoHomes/jasmine-gradle'
-    description = 'allows you to run Jasmine tests using Karma'
-    tags = ['jasmine', 'karma']
+    description = 'allows you to run Jasmine tests using Karma. This is a fork from craigburke plugin, adding karma-junit-reporter '
+    tags = ['jasmine', 'javascript','jquery']
 
     plugins {
         jasmine {
